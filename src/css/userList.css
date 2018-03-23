@@ -1,0 +1,78 @@
+.search-box{
+    padding: 12px
+}
+.search-box>input{
+    border: 1px solid #f1f1f1;
+    border-radius: 3px;
+    padding: 8px 10px;
+    font-size: 14px;
+    outline-color: #1F4E79;
+}
+
+
+::placeholder { 
+    color:#ccc
+}
+
+.UserList{
+    padding: 12px;
+    width: 100%;
+    min-height: 100%;
+}
+.table-list{
+    border-radius: 3px;
+    border: 1px solid #f1f1f1
+}
+
+.cell-col{
+    width: 100%;
+    display: flex;
+}
+.table-list .cell-col:not(:last-child){
+    border-bottom:1px solid #f1f1f1;
+}
+.cell-col>li:not(:last-child){
+    border-right: 1px solid #f1f1f1;
+}
+.cell-1{
+    flex: 1;
+}
+.cell-2{
+    flex: 2;
+}
+.cell-3{
+    flex: 3;
+}
+.cell-4{
+    flex: 4;
+}
+.cell-5{
+    flex: 5;
+}
+.cell-header>li{
+    font-size: 15px;
+    font-weight: bold;
+}
+.cell-col>li{
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    padding: 10px;
+}
+
+button.btn{
+    border-radius: 3px;
+    height: 35px;
+    margin-left: 10px;
+    outline: none;
+    border: none;
+    background: #1F4E79;
+    color: #fff;
+    font-size: 14px;
+}
+button.btn.small{
+    height: 30px;
+}
+button.btn:hover{
+    background: #333
+}
