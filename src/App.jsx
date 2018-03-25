@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
+import {Route,Link,Switch,NavLink} from 'react-router-dom';
 import logo from './img/logo.svg';
 import './css/App.css';
 
 import UserList from './page/user/userList'
+import Menu from './page/menu/menu'
 
 class App extends Component {
   constructor(props){
     super(props);
     this.state={
-      lsitStatue:{
-        useNum:1,
-        menuNum:1,
-        otherNum:1
-      }
+      menu:[
+      ]
     }
-
   }
   render() {
     return (
@@ -22,9 +20,10 @@ class App extends Component {
         <aside className="App-aside">
           <div className="App-aside-header"> <img src={logo} className="App-logo" alt="logo"/> </div>
           <ul className="App-aside-list">
-              <li className="active">USER lIST({this.state.lsitStatue.useNum})</li>
-              <li>MENU({this.state.lsitStatue.menuNum})</li>
-              <li>OTHER({this.state.lsitStatue.otherNum})</li>
+              {/* exact 完全匹配时激活路由及样式 */}
+              <NavLink to="/" exact activeClassName="active">USER lIST</NavLink>
+              <NavLink to="/Menu" activeClassName="active">MENU</NavLink>
+              {/* OTHER */}
           </ul>
         </aside>
         <div className="App-other">
@@ -35,7 +34,10 @@ class App extends Component {
             </div>
           </nav>
           <div>
-          <UserList  />
+            <Switch>          
+              <Route exact path='/' component={UserList}></Route>
+              <Route path='/Menu' component={Menu}></Route>
+            </Switch>
           </div>
          </div>
       </div>

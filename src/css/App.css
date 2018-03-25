@@ -50,7 +50,8 @@ body{
   justify-content: center;
   background: #333;
 }
-.App-aside-list>li{
+.App-aside-list>a{
+  display: block;
   width: 100%;
   padding:0 12px;
   height: 50px;
@@ -58,6 +59,8 @@ body{
   font-size: 15px;
   font-weight: bold;
   text-align: center;
+  color: #fff;
+  text-decoration: none;
 }
 .App-aside-list>.active{
   background: #1F4E79;
